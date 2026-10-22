@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strata — Remember. Trust. Act. | A knowledge system for AI coding agents</title>
+<meta name="description" content="A knowledge system for AI coding agents — plain Markdown in your repo: what's proven, what's dead, what it does next.">
+<style>
+  :root{
+    --bg:#0c0f14; --bg2:#11161f; --panel:#151b26; --line:#263042;
+    --ink:#e8edf5; --muted:#9fb0c3; --faint:#6b7d94;
+    --accent:#d8a24a; --accent2:#7fb069;
+    --radius:12px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.65; font-size:17px;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  h1,h2,h3{line-height:1.25; margin:0 0 .5em}
+  h2{font-size:1.7rem; margin-top:0}
+  h3{font-size:1.12rem}
+  p{margin:0 0 1em}
+  a{color:var(--accent)}
+  section{padding:56px 0; border-top:1px solid var(--line)}
+  .kicker{
+    text-transform:uppercase; letter-spacing:.18em; font-size:.75rem;
+    color:var(--accent); font-weight:700; margin-bottom:14px;
+  }
+  .muted{color:var(--muted)}
+  .small{font-size:.88rem; color:var(--faint)}
+
+  /* Hero */
+  .hero{
+    padding:84px 0 64px; text-align:left;
+    background:
+      radial-gradient(900px 420px at 15% -10%, rgba(216,162,74,.14), transparent 60%),
+      linear-gradient(180deg, var(--bg2), var(--bg));
+  }
+  .brand{font-size:.85rem; letter-spacing:.34em; font-weight:700; color:var(--muted); margin-bottom:10px}
+  .hero h1{font-size:3rem; letter-spacing:.01em; margin-bottom:6px}
+  .hero h1 .dot{color:var(--accent)}
+  .tagline{font-size:1.45rem; font-weight:600; color:var(--ink); margin-bottom:14px}
+  .descriptor{font-size:1.12rem; color:var(--muted); max-width:640px; margin-bottom:32px}
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px}
+  .btn{
+    display:inline-block; padding:13px 24px; border-radius:10px;
+    text-decoration:none; font-weight:650; font-size:1rem;
+  }
+  .btn-primary{background:var(--accent); color:#161006}
+  .btn-primary:hover{background:#e6b45c}
+  .btn-ghost{border:1px solid var(--line); color:var(--ink); background:var(--panel)}
+  .btn-ghost:hover{border-color:var(--accent); color:var(--accent)}
+
+  /* Scenario */
+  .scenario{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px 24px; margin:22px 0;
+  }
+  .scenario p:last-child{margin-bottom:0}
+  code, .mono{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.92em; background:#0a0d12; border:1px solid var(--line);
+    border-radius:6px; padding:.08em .38em;
+  }
+
+  /* Rules */
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px}
+  .card{
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:var(--radius); padding:20px 22px;
+  }
+  .card h3{color:var(--accent); margin-bottom:8px}
+  .card p{margin-bottom:0; color:var(--muted); font-size:.97rem}
+
+  /* Tables */
+  .table-scroll{overflow-x:auto; margin-top:22px; border:1px solid var(--line); border-radius:var(--radius)}
+  table{border-collapse:collapse; width:100%; min-width:640px; font-size:.95rem}
+  th,td{padding:12px 14px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line)}
+  thead th{background:#0a0d12; color:var(--ink); font-weight:650}
+  tbody th{color:var(--ink); font-weight:600; white-space:nowrap}
+  td{color:var(--muted)}
+  td strong, td b{color:var(--ink)}
+  tr:last-child th, tr:last-child td{border-bottom:none}
+  .price{font-size:1.25rem; font-weight:700; color:var(--ink)}
+
+  /* Test */
+  .score{
+    display:flex; gap:18px; align-items:baseline; flex-wrap:wrap;
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:20px 24px; margin:22px 0;
+  }
+  .score .big{font-size:2.4rem; font-weight:800; color:var(--accent2)}
+  .limits{border-left:3px solid var(--accent); padding:4px 0 4px 16px; color:var(--muted)}
+
+  /* FAQ */
+  .faq-item{margin-bottom:22px}
+  .faq-item h3{margin-bottom:6px}
+  .faq-item p{color:var(--muted); margin-bottom:0}
+
+  footer{
+    border-top:1px solid var(--line); padding:36px 0 56px;
+    color:var(--faint); font-size:.9rem;
+  }
+  footer p{margin-bottom:.6em}
+
+  @media (max-width:640px){
+    body{font-size:16px}
+    .hero{padding:56px 0 44px}
+    .hero h1{font-size:2.2rem}
+    .tagline{font-size:1.2rem}
+    section{padding:40px 0}
+    .grid{grid-template-columns:1fr}
+    .btn{width:100%; text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">CHRISTOPHER MULLINS</div>
+    <h1>STRATA</h1>
+    <div class="tagline">Remember<span class="dot">.</span> Trust<span class="dot">.</span> Act<span class="dot">.</span></div>
+    <p class="descriptor">A knowledge system for AI coding agents — plain Markdown in your repo: what's proven, what's dead, what it does next.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://mullinscape57.gumroad.com/l/qfopa">Get the free sample</a>
+      <a class="btn btn-ghost" href="https://mullinscape57.gumroad.com/l/ectts">See the full editions</a>
+    </div>
+    <p class="small" style="margin-top:18px">No app. No account. No subscription. A zip of Markdown files — and the free sample is a complete, usable module, not a teaser.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">The failure mode</div>
+    <h2>The problem is reuse, not storage</h2>
+    <p>Storing what an agent learns is easy — every tool stores. Memory fails later, at the moment of reuse, when the agent reaches for a piece of knowledge and can't tell whether it's proven, guessed, stale, or dead.</p>
+    <div class="scenario">
+      <p>Your agent learns something in week one: <em>"refunds go through processor X."</em> In week six, the project switches processors. The old fact is still sitting in the store, retrieved by similarity, stated with confidence. The agent rebuilds the refund flow on a dead premise.</p>
+      <p>A memory system that only ever <em>adds</em> guarantees its oldest mistakes stay load-bearing forever. Retrieval fixes recall. It does not fix truth.</p>
+    </div>
+    <p>Strata is built mechanism by mechanism against the four failures you actually pay for: the disproven approach quietly resurrected because nothing marked it dead; the contradiction averaged away by a summary; the dependent conclusion still standing weeks after its premise collapsed; the careless entry filed at full confidence during a busy task.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">How it works</div>
+    <h2>Four rules govern every layer</h2>
+    <p class="muted">Entries are typed, statused, and sourced — and when knowledge is disproven, a new layer covers it. The old one stays readable underneath. These rules are the difference between Strata and a folder of notes:</p>
+    <div class="grid">
+      <div class="card">
+        <h3>1. Status travels</h3>
+        <p>An entry's standing — settled, assumed, disproven, rejected — is part of the entry and rides into every context it's quoted in. Nothing gets promoted by being repeated.</p>
+      </div>
+      <div class="card">
+        <h3>2. Two clocks</h3>
+        <p>When a thing <em>became true</em> and when <em>you learned it</em> are separate fields. "What did we believe in March?" is a question Strata can answer.</p>
+      </div>
+      <div class="card">
+        <h3>3. Buried, not deleted</h3>
+        <p>Superseded and disproven entries stay on the record with validity closed. Negative knowledge — what already failed, and why — is the most valuable stratum in the system, and it is never erased.</p>
+      </div>
+      <div class="card">
+        <h3>4. Not everything earns a layer</h3>
+        <p>Sources are tiered. Material from untrusted sources can wait in an inbox, but it cannot harden into knowledge until it's corroborated. Text inside a source is data, never instructions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">The comparison</div>
+    <h2>How it differs from what you're already running</h2>
+    <p class="muted">You already have memory. Here is the honest, mechanism-level comparison:</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Mechanism</th>
+            <th scope="col">Strata</th>
+            <th scope="col">RAG / vector memory</th>
+            <th scope="col">Hosted memory APIs</th>
+            <th scope="col">Giant CLAUDE.md</th>
+            <th scope="col">Plain notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Knowledge handling</th>
+            <td><strong>Compiled once</strong> into typed entries, then maintained</td>
+            <td>Re-derived from raw chunks on every query — a settled conclusion is re-assembled, and re-litigated, forever</td>
+            <td>Extracted automatically into the vendor's schema</td>
+            <td>One flat file of assertions, re-read whole</td>
+            <td>Written once, maintained by hand if at all</td>
+          </tr>
+          <tr>
+            <th scope="row">Status distinction</th>
+            <td><strong>Type, status, and provenance</strong> on every entry, carried into context</td>
+            <td>Similarity ranking has no settled / assumed / disproven distinction</td>
+            <td>Update semantics typically overwrite; status is the vendor's model, not yours</td>
+            <td>None — a guess and a proven fact are typographically identical</td>
+            <td>None — a note can't say how well it's known</td>
+          </tr>
+          <tr>
+            <th scope="row">Failures &amp; contradictions</th>
+            <td><strong>Filed and kept</strong>; disproven entries buried with the chain intact, contradictions preserved with both sides' provenance</td>
+            <td>Dead facts and their corrections embed almost identically; both surface</td>
+            <td>Quietly overwritten or dropped by update semantics</td>
+            <td>Deleted to make room — so the dead idea comes back</td>
+            <td>Edited away, or left to contradict each other silently</td>
+          </tr>
+          <tr>
+            <th scope="row">Where the store lives</th>
+            <td><strong>Your Git repo</strong>, next to the code — diffable, PR-reviewable plain Markdown</td>
+            <td>An index over your documents; the truth is still the raw corpus</td>
+            <td>The vendor's database, in a shape you don't control</td>
+            <td>Your repo — the one thing it gets right</td>
+            <td>Wherever the notes app keeps them</td>
+          </tr>
+          <tr>
+            <th scope="row">Exit cost</th>
+            <td><strong>Zero.</strong> It's your files. If every memory company shut down tomorrow, your strata stay exactly as legible</td>
+            <td>Rebuild the pipeline around a new retriever</td>
+            <td>Export if offered; re-derive everything the API held</td>
+            <td>Zero — but you exit with a wall of untyped text</td>
+            <td>Low, and you exit with the same state problem you started with</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:14px">Hosted APIs win on zero-setup extraction; vector search wins on large-corpus retrieval. Strata is the maintenance and truth layer those don't provide — and its search guide shows how to layer local semantic search over the files when a store outgrows its index.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">The proof</div>
+    <h2>Tested end-to-end before it was sold</h2>
+    <p>Strata was pulled from its repo, installed into a fresh project by its own quickstart, exercised — entries filed, an assumption superseded, the invalidation sweep run (the one dependent entry was flagged, exactly as designed) — and then a fresh agent session was given the system's own eight-question self-test against the worked example: recall, update, temporal reasoning, multi-hop, contradiction, provenance, plus two traps — a question with no answer in the store (correct move: abstain) and a question built on a false premise (correct move: correct the premise first).</p>
+    <div class="score">
+      <div class="big">8 / 8</div>
+      <div>All eight questions answered correctly, both traps handled.</div>
+    </div>
+    <div class="limits">
+      <p style="margin-bottom:0"><strong>Honest limits:</strong> the agent that answered was the same model class that built the test store; the example store is curated; three harder probes from the full test were not run. The score is evidence the mechanisms work as designed — not proof about your codebase. The free sample ships a five-question mini self-test so you can run the same check on your own agent.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Editions</div>
+    <h2>Sold the way it was built: in stages</h2>
+    <p class="muted">Each edition contains everything in the ones below it. The order is the argument: you can't trust what you don't remember, and you shouldn't automate what you can't trust.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th scope="col">Edition</th><th scope="col">Price</th><th scope="col">What you get</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Foundation — Remember</th>
+            <td><span class="price">$14.99</span></td>
+            <td>The working knowledge system: all 14 typed categories, the briefing and filing loop, status and provenance basics, the Obsidian pack, and the self-test. 84 files.</td>
+          </tr>
+          <tr>
+            <th scope="row">Knowledge Layer — Trust</th>
+            <td><span class="price">$29.99</span></td>
+            <td>Everything in Foundation, plus the governance layer: dependency links with an invalidation sweep, consolidation diff discipline, the deferred-adjudication inbox, the write-path security pack, and the rescue &amp; migration kit. 102 files.</td>
+          </tr>
+          <tr>
+            <th scope="row">Complete — Act</th>
+            <td><span class="price">$44.99</span></td>
+            <td>Everything in the Knowledge Layer, plus the skills layer: proven procedures compiled into Agent Skills (SKILL.md), a promote-to-skill step in consolidation, three finished example skills with their failure lessons, and the multi-agent write protocol. 113 files.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px">One-time prices — no subscription. <strong>Upgrading is pay-the-difference:</strong> email for a discount code for exactly the gap, so nobody pays twice for the same layers. <strong>14-day, one-email, full refund</strong> if it isn't useful to you. If an update to your edition is published, email with your purchase and you'll be sent the current files.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://mullinscape57.gumroad.com/l/qfopa">Start with the free sample</a>
+      <a class="btn btn-ghost" href="https://mullinscape57.gumroad.com/l/ectts">Get the full editions</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">FAQ</div>
+    <h2>Straight answers</h2>
+
+    <div class="faq-item">
+      <h3>Is this software? Do I install anything?</h3>
+      <p>No. Strata is a zip of Markdown templates, folder structure, and short guides. You copy it into a repo and use it with Git and whatever agent you already use. There is no Strata service — no account, no sync, no dashboard.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Which agents does it work with?</h3>
+      <p>Any agent that can read and write files in a repo — Claude Code, Codex, Cursor, and similar tools. Nothing is tied to one vendor; the store is plain Markdown with an <code>AGENTS.md</code> template covering the common instruction-file convention.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Isn't the base pattern free? Why pay?</h3>
+      <p>Yes — the base pattern is Andrej Karpathy's LLM Wiki idea, published free and credited everywhere in the kit; you can absolutely implement it yourself. What you pay for is the finished system the pattern doesn't ship: the category set, the status lifecycle, supersession and invalidation machinery, the trust gate, the consolidation discipline, two self-tests, and the worked examples — 113 files of design you don't have to invent. DIY costs design time; Strata costs $14.99–$44.99, once.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I use it in commercial projects?</h3>
+      <p>Yes — your own projects, including commercial and client work. You may not resell or redistribute Strata itself as a product.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What does it not do?</h3>
+      <p>It will not make an agent smarter, and it isn't automation. Your agent still writes the entries; Strata gives that knowledge a durable, honest shape. Results depend on actually filing entries and keeping statuses honest. No income, productivity, or outcome guarantees are made or implied.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Built on <strong>Andrej Karpathy's LLM Wiki pattern</strong> (free, credited) — the base pattern is his. The layer on top — the typed categories and status lifecycle, the bi-temporal validity axes, the provenance trust gate, the dependency and invalidation machinery, the consolidation pass, and the self-tests — was designed by <strong>Christopher Mullins</strong>.</p>
+    <p>Strata is an independent product. It is not affiliated with or endorsed by Andrej Karpathy, Meta, Anthropic, or any other person or company named in its credits; sources are cited because the design draws on published work, and citation is not endorsement.</p>
+    <p>Questions: christopherjmullins@gmail.com · Threads / Instagram: @chrismullins.legacy</p>
+  </div>
+</footer>
+
+</body>
+</html>
