@@ -1,35 +1,36 @@
-Strata — An LLM Wiki Memory Layer for AI Coding Agents — License (plain English)
-Version 1.3
+Strata Sample — The Remember Core — License (plain English)
+
+This license covers the free Strata sample only: the files in this package. The
+full Strata kit (the Foundation, Knowledge Layer, and Complete editions) is a
+separate product with its own license, and nothing in this license changes the
+kit's terms.
 
 WHAT YOU MAY DO
 
-1. Use this kit in your own projects, including commercial projects, for as long as
-   you like. There is no per-project or per-seat fee.
-2. Modify the templates, categories, and documents to fit your project. Your modified
-   versions, and everything you write using them, are yours.
-3. Share the kit inside your own team or company, with the people working on the same
-   projects as you.
-4. Keep using files you created with the kit even if you stop using the kit itself.
-   Your knowledge entries are your content, not ours.
+1. Use the sample in your own projects, including commercial projects, for as
+   long as you like. There is no fee.
+2. Modify the templates, categories, and documents to fit your project. Your
+   modified versions, and everything you write using them, are yours.
+3. Share and redistribute the sample, for free, in original or modified form —
+   post it, mirror it, or include it in a free collection — as long as you keep
+   the credits in CREDITS.md and a copy of this license with it, and make clear
+   it is the free sample of Strata, not the full kit.
+4. Keep using files you created with the sample even if you stop using the
+   sample itself. Your knowledge entries are your content, not ours.
 
 WHAT YOU MAY NOT DO
 
-1. Resell, redistribute, or give away the kit itself — the templates, guides, examples,
-   and documents as a package — whether for money or for free, in original or lightly
-   modified form.
-2. Include the kit, in whole or substantial part, in another product, course, template
-   pack, or repository that you distribute to others.
-3. Remove the credits in CREDITS.md from copies used inside your team. (Your own
-   project's public wiki does not need to display them; the kit files themselves do.)
+1. Sell the sample, or charge for access to it, in original or lightly modified
+   form. Sharing it for free is welcome; reselling it is not.
+2. Remove the credits in CREDITS.md from copies you share.
+3. Present the sample as the full Strata kit.
 
 OTHER TERMS
 
-- The kit is provided "as is", without warranty of any kind. It is a set of documents
-  and templates; it does not guarantee any result for your project.
-- Selling or transferring your single purchase to another person transfers your rights
-  under this license; you may not keep a copy afterwards.
-- If anything in this license is unclear, the reading that favours the buyer's ordinary
-  use in their own projects is the intended one.
+- The sample is provided "as is", without warranty of any kind. It is a set of
+  documents and templates; it does not guarantee any result for your project.
+- If anything in this license is unclear, the reading that favours ordinary use
+  and free sharing with credit is the intended one.
 
-Questions about use beyond these terms: contact the seller through the store page
-where you bought the kit.
+Questions about use beyond these terms: contact the seller through the Strata
+store page on Gumroad.
