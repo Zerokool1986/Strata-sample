@@ -4,6 +4,8 @@
 
 This repository is the free sample of [Strata](https://mullinscape57.gumroad.com/l/ectts): the complete *Remember* core, usable on its own. No app, no account, no service — a folder of Markdown files you copy into your repo and point your agent at.
 
+Colophon: built with Atlas, an AI assistant (Meta Muse), as Chris Mullins's right hand. The designs and decisions are Chris's.
+
 ---
 
 ## What Strata is
