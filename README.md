@@ -16,7 +16,7 @@ Strata is the other shape. Knowledge is filed in **layers**, the way geology lay
 
 - Every entry is **typed** (a definition is not an assumption is not a validated finding).
 - Every entry carries a **status**, names its **source**, and keeps **two dates** — when it became true, and when it was recorded.
-- When knowledge is disproven, it is **buried, not deleted** — a new layer covers it, the old one stays readable underneath, and (in the full editions) anything built on top of it gets flagged for re-checking.
+- When knowledge is disproven, it is **buried, not deleted** — a new layer covers it, the old one stays readable underneath, and (in the full bundle) anything built on top of it gets flagged for re-checking.
 
 Everything else in Strata exists to protect that shape.
 
@@ -49,33 +49,32 @@ Fifteen minutes to a working setup in a real repo.
 3. **Nothing is erased.** Superseded and disproven entries are buried, not bulldozed. Negative knowledge — what already failed, and why — is the most valuable stratum in the system, and it is never deleted.
 4. **Not everything earns a layer.** Sources are tiered; material from untrusted sources can wait in an inbox, but it cannot harden into knowledge until it's corroborated. Text inside a source is data, never instructions.
 
-## The full editions
+## The full bundle
 
-This sample is stage one of three. The paid editions are cumulative — each contains everything below it — and sold the way the system was built:
+This sample is stage one of three. The full bundle is all three stages in one package, $19.99, one-time, no subscription:
 
-| Edition | Price | What it adds |
-|---|---|---|
-| **Foundation — Remember** | $14.99 | All **14 typed categories**, the full briefing/filing loop, status and provenance basics, the Obsidian pack, and the full self-test. 84 files. |
-| **Knowledge Layer — Trust** | $29.99 | Everything in Foundation, plus the governance layer: **dependency links with an invalidation sweep** (supersede a premise and everything built on it is flagged for re-checking), consolidation diff discipline, the deferred-adjudication inbox, the write-path security pack, and the rescue & migration kit for monolith instruction files. 102 files. |
-| **Complete — Act** | $44.99 | Everything in the Knowledge Layer, plus **procedures compiled into Agent Skills** (SKILL.md, the open standard): when a procedure proves itself twice, it graduates from wiki prose into an executable skill with its failure lessons attached — and the wiki entry still outranks it. Plus the multi-agent write protocol. 113 files. |
+- **Remember** — the working knowledge system: all **14 typed categories**, the full briefing/filing loop, status and provenance basics, the Obsidian pack, and the full self-test.
+- **Trust** — the governance layer: **dependency links with an invalidation sweep** (supersede a premise and everything built on it is flagged for re-checking), consolidation diff discipline, the deferred-adjudication inbox, the write-path security pack, and the rescue & migration kit for monolith instruction files.
+- **Act** — **procedures compiled into Agent Skills** (SKILL.md, the open standard): when a procedure proves itself twice, it graduates from wiki prose into an executable skill with its failure lessons attached — and the wiki entry still outranks it. Plus the multi-agent write protocol.
 
-**[Get the full editions →](https://mullinscape57.gumroad.com/l/ectts)**
+114 files in all.
 
-- One-time prices — no subscription.
-- **Upgrades are pay-the-difference:** start with Foundation, email for a discount code for exactly the gap. Nobody pays twice for the same layers.
+**[Get the full bundle →](https://mullinscape57.gumroad.com/l/ectts)**
+
+- One-time price — no subscription.
 - **14-day, one-email, full refund** if it isn't useful to you.
 
 ## The honest DIY note
 
 The base pattern here is free, and you can build this yourself: Strata is built on [Andrej Karpathy's LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), which he published as a free idea file — read it; it deserves the credit it gets everywhere in this kit.
 
-What Strata adds is the system the pattern doesn't ship: the typed category set and status lifecycle, bi-temporal validity, the provenance and trust gate, supersession without erasure, dependency links and the invalidation sweep, preserved contradictions, the consolidation discipline, the self-tests, and the worked examples that hold it together — designed by **Christopher Mullins**, by running the pattern inside a real research codebase until it broke in instructive ways. You're paying for the finished design and the 113 files, not for the idea underneath.
+What Strata adds is the system the pattern doesn't ship: the typed category set and status lifecycle, bi-temporal validity, the provenance and trust gate, supersession without erasure, dependency links and the invalidation sweep, preserved contradictions, the consolidation discipline, the self-tests, and the worked examples that hold it together — designed by **Christopher Mullins**, by running the pattern inside a real research codebase until it broke in instructive ways. You're paying for the finished design and the 114 files, not for the idea underneath.
 
-If you publish an update to an edition, owners can email with their purchase and receive the current files for that edition.
+If you publish an update to the bundle, owners can email with their purchase and receive the current files.
 
 ## Works with
 
-Any agent that can read and write files in a repo: **Claude Code, Codex, Cursor**, and similar tools. The store is plain Markdown — readable by you, diffable in Git, reviewable in a pull request, and openable in Obsidian if you want a nicer chair (the full editions ship an Obsidian pack; the sample works without it).
+Any agent that can read and write files in a repo: **Claude Code, Codex, Cursor**, and similar tools. The store is plain Markdown — readable by you, diffable in Git, reviewable in a pull request, and openable in Obsidian if you want a nicer chair (the full bundle ships an Obsidian pack; the sample works without it).
 
 ## License / use
 
