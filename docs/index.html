@@ -5,6 +5,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Strata — Remember. Trust. Act. | A knowledge system for AI coding agents</title>
 <meta name="description" content="A knowledge system for AI coding agents — plain Markdown in your repo: what's proven, what's dead, what it does next.">
+<link rel="canonical" href="https://zerokool1986.github.io/Strata-sample/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Strata — Remember. Trust. Act. | A knowledge system for AI coding agents">
+<meta property="og:description" content="A knowledge system for AI coding agents — plain Markdown in your repo: what's proven, what's dead, what it does next.">
+<meta property="og:url" content="https://zerokool1986.github.io/Strata-sample/">
+<meta property="og:site_name" content="Strata">
+<meta property="og:image" content="https://zerokool1986.github.io/Strata-sample/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Strata — Remember. Trust. Act. | A knowledge system for AI coding agents">
+<meta name="twitter:description" content="A knowledge system for AI coding agents — plain Markdown in your repo: what's proven, what's dead, what it does next.">
+<meta name="twitter:image" content="https://zerokool1986.github.io/Strata-sample/cover.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Strata — Remember. Trust. Act.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "description": "A knowledge system for AI coding agents — plain Markdown in your repo: what's proven, what's dead, what it does next.",
+  "url": "https://zerokool1986.github.io/Strata-sample/",
+  "author": {
+    "@type": "Person",
+    "name": "Christopher Mullins"
+  },
+  "softwareVersion": "1.3",
+  "offers": {
+    "@type": "Offer",
+    "price": "19.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://mullinscape57.gumroad.com/l/ectts"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this software? Do I install anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Strata is a zip of Markdown templates, folder structure, and short guides. You copy it into a repo and use it with Git and whatever agent you already use. There is no Strata service — no account, no sync, no dashboard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which agents does it work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any agent that can read and write files in a repo — Claude Code, Codex, Cursor, and similar tools. Nothing is tied to one vendor; the store is plain Markdown with an AGENTS.md template covering the common instruction-file convention."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Isn't the base pattern free? Why pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — the base pattern is Andrej Karpathy's LLM Wiki idea, published free and credited everywhere in the kit; you can absolutely implement it yourself. What you pay for is the finished system the pattern doesn't ship: the category set, the status lifecycle, supersession and invalidation machinery, the trust gate, the consolidation discipline, two self-tests, and the worked examples — 114 files of design you don't have to invent. DIY costs design time; Strata costs $19.99, once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it in commercial projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — your own projects, including commercial and client work. You may not resell or redistribute Strata itself as a product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it not do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It will not make an agent smarter, and it isn't automation. Your agent still writes the entries; Strata gives that knowledge a durable, honest shape. Results depend on actually filing entries and keeping statuses honest. No income, productivity, or outcome guarantees are made or implied."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my coding agent keep forgetting my corrections?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because a correction in a notes file or a chat log has no standing. Nothing records that the old version was disproven, so the next session retrieves the old fact by similarity and states it with confidence. Strata files the correction as a new layer over the old entry, with the old version kept readable underneath and marked disproven, so the dead rule cannot come back quietly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Strata different from RAG or vector memory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vector search retrieves by similarity. It cannot tell a settled fact from a guess or a dead fact from a live one, and a dead fact and its correction embed almost identically, so both surface. Strata compiles knowledge once into typed entries with status and provenance, then maintains it: disproven entries are buried with the chain intact, contradictions are preserved with both sides, and dependent conclusions are flagged when a premise collapses. The comparison table above has the full mechanism-level breakdown."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is in the free sample?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The free sample is the complete Remember core, 29 files: the 14 typed categories, the briefing and filing loop, status and provenance basics, and a five-question mini self-test. It is a usable module, not a teaser. The full bundle adds Trust and Act for $19.99, one time."
+      }
+    }
+  ]
+}
+</script>
 <style>
   :root{
     --bg:#0c0f14; --bg2:#11161f; --panel:#151b26; --line:#263042;
@@ -299,6 +405,20 @@
     <div class="faq-item">
       <h3>What does it not do?</h3>
       <p>It will not make an agent smarter, and it isn't automation. Your agent still writes the entries; Strata gives that knowledge a durable, honest shape. Results depend on actually filing entries and keeping statuses honest. No income, productivity, or outcome guarantees are made or implied.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does my coding agent keep forgetting my corrections?</h3>
+      <p>Because a correction in a notes file or a chat log has no standing. Nothing records that the old version was disproven, so the next session retrieves the old fact by similarity and states it with confidence. Strata files the correction as a new layer over the old entry, with the old version kept readable underneath and marked disproven, so the dead rule cannot come back quietly.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How is Strata different from RAG or vector memory?</h3>
+      <p>Vector search retrieves by similarity. It cannot tell a settled fact from a guess or a dead fact from a live one, and a dead fact and its correction embed almost identically, so both surface. Strata compiles knowledge once into typed entries with status and provenance, then maintains it: disproven entries are buried with the chain intact, contradictions are preserved with both sides, and dependent conclusions are flagged when a premise collapses. The comparison table above has the full mechanism-level breakdown.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What is in the free sample?</h3>
+      <p>The free sample is the complete Remember core, 29 files: the 14 typed categories, the briefing and filing loop, status and provenance basics, and a five-question mini self-test. It is a usable module, not a teaser. The full bundle adds Trust and Act for $19.99, one time.</p>
     </div>
   </div>
 </section>

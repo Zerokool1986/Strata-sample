@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zerokool1986.github.io/Strata-sample/sitemap.xml
