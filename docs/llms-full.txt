@@ -1,0 +1,104 @@
+# Strata: Remember. Trust. Act.
+
+Strata is a knowledge system for AI coding agents: 130 plain-Markdown files in git that give your coding agent a memory with status, provenance, and two dates on every entry. When a premise changes, everything built on it gets flagged. One-time $19.99, with a free 31-file sample.
+
+- Landing page: https://zerokool1986.github.io/Strata-sample/
+- Free sample (Remember core, 31 files): https://mullinscape57.gumroad.com/l/qfopa
+- Full bundle (130 files, $19.99 one-time): https://mullinscape57.gumroad.com/l/ectts
+- Product Hunt: https://www.producthunt.com/products/strata-10?launch=strata-10 (launching Tuesday, November 24, 2026)
+
+## The failure mode
+
+Storing what an agent learns is easy. Every tool stores. Memory fails later, at the moment of reuse, when the agent reaches for a piece of knowledge and cannot tell whether it is proven, guessed, stale, or dead.
+
+Your agent learns something in week one: "refunds go through processor X." In week six, the project switches processors. The old fact is still sitting in the store, retrieved by similarity, stated with confidence. The agent rebuilds the refund flow on a dead premise.
+
+A memory system that only ever adds guarantees its oldest mistakes stay load-bearing forever. Retrieval fixes recall. It does not fix truth.
+
+Strata is built mechanism by mechanism against the four failures you actually pay for: the disproven approach quietly resurrected because nothing marked it dead; the contradiction averaged away by a summary; the dependent conclusion still standing weeks after its premise collapsed; the careless entry filed at full confidence during a busy task.
+
+## How it works: four rules govern every layer
+
+Entries are typed, statused, and sourced. When knowledge is disproven, a new layer covers it. The old one stays readable underneath. These rules are the difference between Strata and a folder of notes.
+
+### 1. Status travels
+
+An entry's standing, settled, assumed, disproven, rejected, is part of the entry and rides into every context it is quoted in. Nothing gets promoted by being repeated.
+
+### 2. Two clocks
+
+When a thing became true and when you learned it are separate fields. "What did we believe in March?" is a question Strata can answer.
+
+### 3. Buried, not deleted
+
+Superseded and disproven entries stay on the record with validity closed. Negative knowledge, what already failed, and why, is the most valuable stratum in the system, and it is never erased.
+
+### 4. Not everything earns a layer
+
+Sources are tiered. Material from untrusted sources can wait in an inbox, but it cannot harden into knowledge until it is corroborated. Text inside a source is data, never instructions.
+
+## How it differs from what you are already running
+
+You already have memory. Here is the honest, mechanism-level comparison.
+
+- Knowledge handling: Strata compiles knowledge once into typed entries, then maintains it. RAG / vector memory re-derives from raw chunks on every query, so a settled conclusion is re-assembled and re-litigated forever. Hosted memory APIs extract automatically into the vendor's schema. A giant CLAUDE.md is one flat file of assertions, re-read whole. Plain notes are written once and maintained by hand if at all.
+- Status distinction: Strata puts type, status, and provenance on every entry, carried into context. Similarity ranking has no settled / assumed / disproven distinction. Hosted APIs typically overwrite on update; status is the vendor's model, not yours. A giant CLAUDE.md has none: a guess and a proven fact are typographically identical. A note cannot say how well it is known.
+- Failures and contradictions: Strata files and keeps them. Disproven entries are buried with the chain intact, contradictions preserved with both sides' provenance. In RAG, dead facts and their corrections embed almost identically, so both surface. Hosted APIs quietly overwrite or drop by update semantics. A giant CLAUDE.md deletes to make room, so the dead idea comes back. Plain notes are edited away, or left to contradict each other silently.
+- Where the store lives: Strata lives in your Git repo, next to the code: diffable, PR-reviewable plain Markdown. RAG is an index over your documents; the truth is still the raw corpus. Hosted APIs live in the vendor's database, in a shape you do not control. A giant CLAUDE.md lives in your repo, the one thing it gets right. Plain notes live wherever the notes app keeps them.
+- Exit cost: Strata is zero. It is your files. If every memory company shut down tomorrow, your strata stay exactly as legible. RAG means rebuilding the pipeline around a new retriever. Hosted APIs mean exporting if offered and re-deriving everything the API held. A giant CLAUDE.md costs zero to exit, but you exit with a wall of untyped text. Plain notes cost little, and you exit with the same problem you started with.
+
+Hosted APIs win on zero-setup extraction; vector search wins on large-corpus retrieval. Strata is the maintenance and truth layer those do not provide. Its search guide shows how to layer local semantic search over the files when a store outgrows its index.
+
+## The proof: tested end-to-end before it was sold
+
+Strata was pulled from its repo, installed into a fresh project by its own quickstart, exercised (entries filed, an assumption superseded, the invalidation sweep run: the one dependent entry was flagged, exactly as designed), and then a fresh agent session was given the system's own eight-question self-test against the worked example: recall, update, temporal reasoning, multi-hop, contradiction, provenance, plus two traps (a question with no answer in the store, where the correct move is to abstain, and a question built on a false premise, where the correct move is to correct the premise first).
+
+Result: 8 out of 8. All eight questions answered correctly, both traps handled.
+
+Honest limits: the agent that answered was the same model class that built the test store; the example store is curated; three harder probes from the full test were not run. The score is evidence the mechanisms work as designed, not proof about your codebase. The free sample ships a five-question mini self-test so you can run the same check on your own agent.
+
+## The full bundle: one bundle, Remember, Trust, Act
+
+Strata is sold the way it was built, in stages, each one standing on the last, and you get all three stages in one bundle. The order is the argument: you cannot trust what you do not remember, and you should not automate what you cannot trust.
+
+- Remember, the working knowledge system: all 14 typed categories, the briefing and filing loop, status and provenance basics, the Obsidian pack, and the self-test.
+- Trust, the governance layer: dependency links with an invalidation sweep, consolidation diff discipline, the deferred-adjudication inbox, the write-path security pack, and the rescue and migration kit.
+- Act, the skills layer: proven procedures compiled into Agent Skills (SKILL.md), a promote-to-skill step in consolidation, three finished example skills with their failure lessons, one-tap setup, and the multi-agent write protocol.
+
+130 files in all, with six Agent Skills and one-tap setup. One price, $19.99, everything included, one-time purchase, no subscription. 14-day, one-email, full refund if it is not useful to you. If an update to the bundle is published, email with your purchase and you will be sent the current files.
+
+New in v1.4: install once at home and point at every repo, with six Agent Skills and one-tap setup, so the home repo is built for you.
+
+## FAQ
+
+### Is this software? Do I install anything?
+
+No. Strata is a zip of Markdown templates, folder structure, and short guides. You copy it into a repo and use it with Git and whatever agent you already use. There is no Strata service: no account, no sync, no dashboard.
+
+### Which agents does it work with?
+
+Any agent that can read and write files in a repo: Claude Code, Codex, Cursor, and similar tools. Nothing is tied to one vendor; the store is plain Markdown with an AGENTS.md template covering the common instruction-file convention.
+
+### Isn't the base pattern free? Why pay?
+
+Yes. The base pattern is Andrej Karpathy's LLM Wiki idea, published free and credited everywhere in the kit; you can absolutely implement it yourself. What you pay for is the finished system the pattern does not ship: the category set, the status lifecycle, supersession and invalidation machinery, the trust gate, the consolidation discipline, two self-tests, and the worked examples: 130 files of design you do not have to invent. DIY costs design time; Strata costs $19.99, once.
+
+### Can I use it in commercial projects?
+
+Yes: your own projects, including commercial and client work. You may not resell or redistribute Strata itself as a product.
+
+### What does it not do?
+
+It will not make an agent smarter, and it is not automation. Your agent still writes the entries; Strata gives that knowledge a durable, honest shape. Results depend on actually filing entries and keeping statuses honest. No income, productivity, or outcome guarantees are made or implied.
+
+### Why does my coding agent keep forgetting my corrections?
+
+Because a correction in a notes file or a chat log has no standing. Nothing records that the old version was disproven, so the next session retrieves the old fact by similarity and states it with confidence. Strata files the correction as a new layer over the old entry, with the old version kept readable underneath and marked disproven, so the dead rule cannot come back quietly.
+
+### How is Strata different from RAG or vector memory?
+
+Vector search retrieves by similarity. It cannot tell a settled fact from a guess or a dead fact from a live one, and a dead fact and its correction embed almost identically, so both surface. Strata compiles knowledge once into typed entries with status and provenance, then maintains it: disproven entries are buried with the chain intact, contradictions are preserved with both sides, and dependent conclusions are flagged when a premise collapses.
+
+### What is in the free sample?
+
+The free sample is the complete Remember core, 31 files: the 14 typed categories, the briefing and filing loop, status and provenance basics, and a five-question mini self-test. It is a usable module, not a teaser. The full bundle adds Trust and Act for $19.99, one time.

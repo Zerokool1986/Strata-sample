@@ -1,0 +1,41 @@
+# Strata
+
+> Strata is a knowledge system for AI coding agents: 130 plain-Markdown files in git that give your coding agent a memory with status, provenance, and two dates on every entry. When a premise changes, everything built on it gets flagged. One-time $19.99, with a free 31-file sample.
+
+## Links
+
+- [Strata landing page](https://zerokool1986.github.io/Strata-sample/): what Strata is, how it works, the comparison, the proof, FAQ
+- [Free sample: the Remember core, 31 files](https://mullinscape57.gumroad.com/l/qfopa)
+- [Full bundle: 130 files, $19.99 one-time](https://mullinscape57.gumroad.com/l/ectts)
+- [Strata on Product Hunt](https://www.producthunt.com/products/strata-10?launch=strata-10): launching Tuesday, November 24, 2026
+
+## What it is
+
+Strata is a plain-Markdown knowledge system that lives in your Git repo, next to the code. Every entry carries a status (settled, assumed, disproven), a source, and two dates: when it became true, and when it was recorded. Disproven entries are buried, not deleted, so they stay readable and cannot be quietly resurrected. When a premise changes, an invalidation sweep flags everything that depended on it.
+
+## Who it is for
+
+Coding agents that read and write files in a repo: Claude Code, Codex, Cursor, and similar tools. Nothing is tied to one vendor. There is no Strata service, no account, no sync, no dashboard.
+
+## The four rules
+
+- Status travels: an entry's standing rides into every context it is quoted in.
+- Two clocks: when a thing became true and when you learned it are separate fields.
+- Buried, not deleted: superseded and disproven entries stay on the record with validity closed.
+- Not everything earns a layer: material from untrusted sources waits in an inbox until corroborated.
+
+## How it differs
+
+- RAG / vector memory retrieves by similarity and cannot tell a settled fact from a guess or a dead fact from a live one.
+- Hosted memory APIs keep knowledge in the vendor's database, in a shape you do not control.
+- A giant CLAUDE.md is one flat file of assertions with no provenance.
+- Plain notes have no states: a note cannot say how well it is known.
+- Strata compiles knowledge once into typed entries, then maintains it: status, provenance, invalidation sweeps, and procedures compiled into Agent Skills.
+
+## What you get
+
+130 files in one bundle for $19.99, one-time, no subscription: Remember (the working knowledge system, 14 typed categories), Trust (the governance layer), Act (the skills layer, six Agent Skills with one-tap setup and home-install mode). 14-day, one-email, full refund. The free sample is the complete Remember core, 31 files, with a five-question mini self-test.
+
+## Full text
+
+- [llms-full.txt](https://zerokool1986.github.io/Strata-sample/llms-full.txt): the full product description, comparison, proof, and FAQ.
