@@ -102,6 +102,14 @@
     },
     {
       "@type": "Question",
+      "name": "How is Strata different from Mem0, Zep, or Supermemory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mem0 and Supermemory are hosted services that extract facts and retrieve them, and Zep is a temporal knowledge graph that invalidates old facts on contradiction. None of them marks a fact settled versus guessed as the headline, buries a disproven fact instead of deleting it, or sweeps everything that depended on it when a premise changes. Strata is plain Markdown in your repo, and that discipline is the product. The named comparison above has the full breakdown."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "What is in the free sample?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -346,6 +354,23 @@
 
 <section>
   <div class="wrap">
+    <div class="kicker">The named alternatives</div>
+    <h2>Against Mem0, Zep, Letta, Supermemory, and the rest</h2>
+    <p>Every alternative below answers "can the agent recall it?" Strata is the only one whose headline is "should the agent believe it, and what breaks if it is wrong?"</p>
+    <ul>
+      <li><strong>Mem0:</strong> wins on getting started. It auto-extracts facts from conversations in a few lines of code and is production-ready. It is a hosted service with no status discipline: nothing marks a fact settled versus guessed. Its current v3 algorithm is ADD-only, so when a fact changes, old and new both persist and retrieval has to resolve the contradiction with no settled, assumed, or disproven distinction to lean on. Strata buries a disproven fact instead, keeps it readable underneath, and sweeps what depended on it.</li>
+      <li><strong>Zep / Graphiti:</strong> the closest relative, and the one to respect. A temporal knowledge graph where every fact has a validity window, and contradictions invalidate the old fact without discarding the history. That is close to Strata's two clocks. The differences: it needs a graph backend or a paid cloud, and it invalidates the fact itself. It does not re-check everything that depended on it in files a human can read.</li>
+      <li><strong>Letta (MemGPT):</strong> self-editing memory blocks with real research pedigree. But it is a runtime you adopt wholesale, not a kit you add to the Claude Code or Cursor setup you already have, and it pitches no governance discipline.</li>
+      <li><strong>Supermemory:</strong> a hosted memory API that extracts facts, connects them in a temporal graph, and answers with a per-user profile in one query, with a self-hosted local binary as the on-ramp. Its headline is retrieval and profiles, not status discipline: nothing in its pitch marks a fact settled versus guessed, buries it instead of deleting it, or sweeps what depended on it. And its source of truth is its engine, hosted or a closed binary, not files you can open, diff, and review.</li>
+      <li><strong>Basic Memory:</strong> the closest analogue. Plain Markdown, typed relations, schemas, local-first and free, with Cloud from $19 a month per workspace, checked November 7, 2026. Its pitch is storage, retrieval, and ownership. No settled versus guessed status as the headline, no burial instead of deletion, no invalidation sweep, no contradiction inbox, no self-test exam.</li>
+      <li><strong>Cognee:</strong> ingest anything, build a knowledge graph, recall follows connections. But the artefact is a graph database, not files you can open and read, and there is no governance layer.</li>
+    </ul>
+    <p class="small" style="margin-top:14px">The concession, because a comparison that never concedes is an ad: if you need a hosted API serving thousands of users, Strata is not that. It is for the agent sitting in your repo. And the filing discipline is manual work. That is the price of the trustworthiness. No automatic extraction, no vector search built in. Claims about the alternatives were checked November 7, 2026, except Zep, Letta, and Cognee, which were last compared October 25, 2026, and Supermemory, checked November 19, 2026.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <div class="kicker">The proof</div>
     <h2>Tested end-to-end before it was sold</h2>
     <p>Strata was pulled from its repo, installed into a fresh project by its own quickstart, exercised — entries filed, an assumption superseded, the invalidation sweep run (the one dependent entry was flagged, exactly as designed) — and then a fresh agent session was given the system's own eight-question self-test against the worked example: recall, update, temporal reasoning, multi-hop, contradiction, provenance, plus two traps — a question with no answer in the store (correct move: abstain) and a question built on a false premise (correct move: correct the premise first).</p>
@@ -414,6 +439,11 @@
     <div class="faq-item">
       <h3>How is Strata different from RAG or vector memory?</h3>
       <p>Vector search retrieves by similarity. It cannot tell a settled fact from a guess or a dead fact from a live one, and a dead fact and its correction embed almost identically, so both surface. Strata compiles knowledge once into typed entries with status and provenance, then maintains it: disproven entries are buried with the chain intact, contradictions are preserved with both sides, and dependent conclusions are flagged when a premise collapses. The comparison table above has the full mechanism-level breakdown.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How is Strata different from Mem0, Zep, or Supermemory?</h3>
+      <p>Mem0 and Supermemory are hosted services that extract facts and retrieve them, and Zep is a temporal knowledge graph that invalidates old facts on contradiction. None of them marks a fact settled versus guessed as the headline, buries a disproven fact instead of deleting it, or sweeps everything that depended on it when a premise changes. Strata is plain Markdown in your repo, and that discipline is the product. The named comparison above has the full breakdown.</p>
     </div>
 
     <div class="faq-item">
