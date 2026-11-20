@@ -118,4 +118,4 @@ Mem0 and Supermemory are hosted services that extract facts and retrieve them, a
 
 ### What is in the free sample?
 
-The free sample is the complete Remember core, 31 files: the 14 typed categories, the briefing and filing loop, status and provenance basics, and a five-question mini self-test. It is a usable module, not a teaser. The full bundle adds Trust and Act for $19.99, one time.
+The free sample is the complete Remember core, 31 files: four typed categories, the briefing and filing loop, status and provenance basics, and a five-question mini self-test. It is a usable module, not a teaser. The full bundle adds Trust and Act for $19.99, one time.
