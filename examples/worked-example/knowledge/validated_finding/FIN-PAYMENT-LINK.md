@@ -11,7 +11,7 @@ related: [OBS-LATE-PAYMENTS, NEG-PDF-ONLY-INVOICES, MET-BEFORE-AFTER-COMPARISON]
 evidence: [comparison record, 2026-02-25; OBS-LATE-PAYMENTS]
 ---
 
-# FIN-PAYMENT-LINK — A payment link in the email body gets invoices paid faster
+# FIN-PAYMENT-LINK, A payment link in the email body gets invoices paid faster
 
 ## The finding
 

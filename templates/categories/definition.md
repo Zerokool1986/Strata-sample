@@ -1,4 +1,4 @@
-# Template — Definition
+# Template, Definition
 
 **File it here if:** a term, invariant, or interface has a settled meaning the whole project should share.
 
@@ -33,7 +33,7 @@ review_due: YYYY-MM-DD
 importance: <1-5>
 ---
 
-# [Title — one line]
+# [Title, one line]
 
 ## Summary
 
@@ -61,12 +61,12 @@ importance: <1-5>
 
 ## Evidence
 
-[Links, paths, test names, dates — or an explicit "no evidence yet" that matches
+[Links, paths, test names, dates, or an explicit "no evidence yet" that matches
 the status you chose.]
 
 ---
 
-## Worked example (from the sample project — delete when you file a real entry)
+## Worked example (from the sample project, delete when you file a real entry)
 
 ---
 id: DEF-INVOICE
@@ -84,7 +84,7 @@ evidence: []
 
 # An invoice is a request for payment, not a receipt
 
-In the sample project (Ledgerline, an invoicing app for freelancers), an *invoice* is the document that requests payment for work already agreed. A *receipt* is issued after payment arrives. The two are never the same record, and the app never edits an invoice after it is sent — corrections are new documents linked to the original.
+In the sample project (Ledgerline, an invoicing app for freelancers), an *invoice* is the document that requests payment for work already agreed. A *receipt* is issued after payment arrives. The two are never the same record, and the app never edits an invoice after it is sent, corrections are new documents linked to the original.
 
 The full set of worked examples, cross-linked as a real store, is in
 `examples/worked-example/`.

@@ -1,4 +1,4 @@
-# Template — Assumption
+# Template, Assumption
 
 **File it here if:** the project is relying on something that has not been tested, and work would change if it turned out false.
 
@@ -33,7 +33,7 @@ review_due: YYYY-MM-DD
 importance: <1-5>
 ---
 
-# [Title — one line]
+# [Title, one line]
 
 ## Summary
 
@@ -61,12 +61,12 @@ importance: <1-5>
 
 ## Evidence
 
-[Links, paths, test names, dates — or an explicit "no evidence yet" that matches
+[Links, paths, test names, dates, or an explicit "no evidence yet" that matches
 the status you chose.]
 
 ---
 
-## Worked example (from the sample project — delete when you file a real entry)
+## Worked example (from the sample project, delete when you file a real entry)
 
 ---
 id: ASM-CLIENTS-CHECK-EMAIL
@@ -84,7 +84,7 @@ evidence: []
 
 # Most clients still read invoice email within 2 days
 
-Ledgerline's whole reminder design assumes clients see email quickly. Support reports support this for small-business clients, but it has never been measured. If it is false — if clients mainly respond to messages on other channels — the reminder schedule needs redesign, not retiming. Checkable with email open tracking, which is deliberately not enabled yet for privacy reasons; the assumption stays flagged until then.
+Ledgerline's whole reminder design assumes clients see email quickly. Support reports support this for small-business clients, but it has never been measured. If it is false, if clients mainly respond to messages on other channels, the reminder schedule needs redesign, not retiming. Checkable with email open tracking, which is deliberately not enabled yet for privacy reasons; the assumption stays flagged until then.
 
 The full set of worked examples, cross-linked as a real store, is in
 `examples/worked-example/`.

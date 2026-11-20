@@ -11,7 +11,7 @@ related: [HYP-REMINDER-TIMING, OBS-LATE-PAYMENTS]
 evidence: []
 ---
 
-# ASM-CLIENTS-CHECK-EMAIL — Most clients read invoice email within 2 days
+# ASM-CLIENTS-CHECK-EMAIL, Most clients read invoice email within 2 days
 
 ## The assumption
 
@@ -23,7 +23,7 @@ within about 2 days of it being sent.
 The entire reminder design: reminder timing is planned in days, on the belief
 that a reminder sent on day X influences behaviour around day X. If clients
 actually batch their email weekly, or mostly respond on other channels,
-retiming reminders is pointless — the channel is the problem.
+retiming reminders is pointless, the channel is the problem.
 
 ## Why we believe it for now
 

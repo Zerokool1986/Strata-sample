@@ -1,4 +1,4 @@
-# Agent Briefing — Move the first reminder to 2 days before the due date
+# Agent Briefing, Move the first reminder to 2 days before the due date
 
 > Filled example, built with `templates/agent-briefing.md`. (The entry texts named
 > here are in `knowledge/` in this worked example.)
@@ -18,26 +18,26 @@ changes in this task.
 The first reminder currently lands on the due date itself (DEF-OVERDUE-30:
 due date = send + 30 days), so a client who pays on first prompting is
 already late. Moving the prompt earlier only matters if clients actually see
-email quickly — which is an assumption, not a measurement
+email quickly, which is an assumption, not a measurement
 (ASM-CLIENTS-CHECK-EMAIL). This task makes the timing change and records
 the window it will be judged over.
 
-## Relevant knowledge — pulled, with status
+## Relevant knowledge, pulled, with status
 
 | Entry id | Status | Why it matters here |
 |---|---|---|
-| `ASM-CLIENTS-CHECK-EMAIL` | assumed | The whole idea leans on clients seeing email quickly — unmeasured |
+| `ASM-CLIENTS-CHECK-EMAIL` | assumed | The whole idea leans on clients seeing email quickly, unmeasured |
 | `DEF-OVERDUE-30` | settled | The due date this task counts from (send + 30 days) |
 
 ## Assumptions in play
 
-- `ASM-CLIENTS-CHECK-EMAIL` — if clients do not read email within ~2 days, a
+- `ASM-CLIENTS-CHECK-EMAIL`, if clients do not read email within ~2 days, a
   2-day-early reminder is no earlier in any sense that matters. If the comparison
   fails, this assumption is investigated before the wording is.
 
 ## Negative knowledge and rejected paths
 
-- `NEG-PDF-ONLY-INVOICES` (disproven) — the reminder must keep amount, due date,
+- `NEG-PDF-ONLY-INVOICES` (disproven), the reminder must keep amount, due date,
   and payment link in the email body. Not directly this task's surface, but the
   reminder template must not be "tidied" into an attachment-only form.
 
@@ -46,7 +46,7 @@ the window it will be judged over.
 - Do not change the due-date definition or the overdue classification.
 - Do not change reminder wording in this task (timing only), so the comparison
   has one variable.
-- The comparison record is filed as an observation when its window closes —
+- The comparison record is filed as an observation when its window closes,
   not by this task, which only sets the window up.
 
 ## What to file back afterwards

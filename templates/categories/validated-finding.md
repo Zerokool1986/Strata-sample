@@ -1,4 +1,4 @@
-# Template — Validated finding
+# Template, Validated finding
 
 **File it here if:** a claim was tested, the test is recorded, and the result held up.
 
@@ -33,7 +33,7 @@ review_due: YYYY-MM-DD
 importance: <1-5>
 ---
 
-# [Title — one line]
+# [Title, one line]
 
 ## Summary
 
@@ -61,12 +61,12 @@ importance: <1-5>
 
 ## Evidence
 
-[Links, paths, test names, dates — or an explicit "no evidence yet" that matches
+[Links, paths, test names, dates, or an explicit "no evidence yet" that matches
 the status you chose.]
 
 ---
 
-## Worked example (from the sample project — delete when you file a real entry)
+## Worked example (from the sample project, delete when you file a real entry)
 
 ---
 id: FIN-PAYMENT-LINK

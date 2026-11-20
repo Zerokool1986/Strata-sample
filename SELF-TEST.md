@@ -1,4 +1,4 @@
-# Mini Self-Test — Five Questions for the Worked Example
+# Mini Self-Test, Five Questions for the Worked Example
 
 ## How to run this
 
@@ -10,7 +10,7 @@ answers against the key at the bottom.
 The point is not trivia. Each question tests one ability a knowledge store
 exists to give an agent: recalling what is settled, tracking what changed,
 knowing how much to trust a claim and why, refusing to repeat what already
-failed — and saying "not in the store" instead of inventing an answer.
+failed, and saying "not in the store" instead of inventing an answer.
 
 ## The questions
 
@@ -22,11 +22,11 @@ failed — and saying "not in the store" instead of inventing an answer.
    happened to the old entry?
 
 3. **Provenance.** The store says most clients read invoice email within
-   about 2 days. How well-established is that claim — what is its status,
+   about 2 days. How well-established is that claim, what is its status,
    how was it arrived at, and what evidence backs it?
 
 4. **Negative knowledge.** A teammate proposes simplifying invoice emails:
-   empty body, everything — amount, due date, payment link — inside the PDF
+   empty body, everything, amount, due date, payment link, inside the PDF
    attachment only. What does the store say about that idea?
 
 5. **Abstention.** Which payment processor does Ledgerline use to collect
@@ -52,7 +52,7 @@ failed — and saying "not in the store" instead of inventing an answer.
 
 3. **Provenance.** Weakly established, and labelled as such. Entry
    `ASM-CLIENTS-CHECK-EMAIL` has status **`assumed`** and source
-   **`inferred`**, with **no evidence attached** — it rests on support
+   **`inferred`**, with **no evidence attached**, it rests on support
    conversations and consistency with the payment pattern, and the entry
    itself says it was never measured. A correct answer reports the claim
    *and* its low standing; an answer that presents the 2-day figure as a
@@ -60,7 +60,7 @@ failed — and saying "not in the store" instead of inventing an answer.
 
 4. **Negative knowledge.** It was tried and it failed. `NEG-PDF-ONLY-INVOICES`
    (status `disproven`) records that attachment-only invoice emails were
-   missed or distrusted by clients — lost behind spam filters and mobile
+   missed or distrusted by clients, lost behind spam filters and mobile
    mail, and useless when forwarded to a bookkeeper. The standing
    instruction is that amount, due date, and payment link stay in the email
    body; there are no retry conditions for the original approach.
@@ -68,7 +68,7 @@ failed — and saying "not in the store" instead of inventing an answer.
 5. **Abstention.** **Not in the store.** No entry in the worked example names
    a payment processor or any fees. The correct answer is to say exactly
    that. Any named processor, fee schedule, or confident guess is a
-   fabrication and fails the question — this is the most important of the
+   fabrication and fails the question, this is the most important of the
    five.
 
 ## What this is a miniature of
@@ -79,6 +79,6 @@ store, not someone else's) spanning recall, knowledge updates, temporal
 reasoning, multi-hop questions, contradiction handling, provenance, and
 abstention. When the full v1.3 kit was itself tested end to end, a fresh
 agent session with access only to the shipped worked example scored **8/8**
-on an eight-question run — including both trap questions: one whose answer
+on an eight-question run, including both trap questions: one whose answer
 was not in the store, and one built on a false premise it had to correct
 before answering.

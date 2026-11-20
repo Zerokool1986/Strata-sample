@@ -1,4 +1,4 @@
-# The Knowledge Store — Categories Index
+# The Knowledge Store, Categories Index
 
 This folder is **Tier 1**: the canonical memory of the project. Plain Markdown, in
 Git, one entry per file. If this folder and a tool disagree, this folder is right.
@@ -8,33 +8,33 @@ Git, one entry per file. If this folder and a tool disagree, this folder is righ
 Every entry is a Markdown file with YAML frontmatter (see
 `templates/knowledge-entry.md`):
 
-- `id` — the stable identifier, also the file name: `TYPE-SHORT-SLUG.md`
+- `id`, the stable identifier, also the file name: `TYPE-SHORT-SLUG.md`
   (for example `NEG-PDF-ONLY-INVOICES.md`). Never reuse an id.
-- `type` — the category (folder) the entry lives in.
-- `status` — how well this is known (vocabulary below). **Required.**
-- `source` — how it is known: `observed`, `quoted`, or `inferred`. **Required.**
-- `created` / `updated` — dates. Update `updated` whenever the file changes.
-- `supersedes` / `superseded_by` — the supersession chain (below).
-- `related` — ids of entries this one depends on or affects.
-- `depends_on` — the few ids this entry's truth rests on (below). The
+- `type`, the category (folder) the entry lives in.
+- `status`, how well this is known (vocabulary below). **Required.**
+- `source`, how it is known: `observed`, `quoted`, or `inferred`. **Required.**
+- `created` / `updated`, dates. Update `updated` whenever the file changes.
+- `supersedes` / `superseded_by`, the supersession chain (below).
+- `related`, ids of entries this one depends on or affects.
+- `depends_on`, the few ids this entry's truth rests on (below). The
   invalidation sweep reads this field; nothing else does.
-- `needs_review` — blank, or `true` when the sweep has flagged this entry
+- `needs_review`, blank, or `true` when the sweep has flagged this entry
   because something it depends on changed. A flag, not a status.
-- `evidence` — links or paths backing the entry: tests, logs, documents, entries.
-- `memory_kind` — what the memory is for: `semantic`, `episodic`, or
+- `evidence`, links or paths backing the entry: tests, logs, documents, entries.
+- `memory_kind`, what the memory is for: `semantic`, `episodic`, or
   `procedural`. A second axis, explained below. Most entries never need it
-  typed by hand — it follows from the category.
-- `source_tier` — how trustworthy the backing source is: `primary`,
+  typed by hand, it follows from the category.
+- `source_tier`, how trustworthy the backing source is: `primary`,
   `secondary`, or `untrusted`. See "Source tiers" below.
-- `valid_from` / `valid_to` — when the claim is true in the world (below).
-- `recorded` — when the wiki learned it (below).
-- `recorded_by` — who or what filed it: a human's name, or an agent's name
+- `valid_from` / `valid_to`, when the claim is true in the world (below).
+- `recorded`, when the wiki learned it (below).
+- `recorded_by`, who or what filed it: a human's name, or an agent's name
   plus model. Authorship provenance (v1.3), complementing `source_tier`'s
   evidence provenance; filled at filing time and never edited afterwards.
   The shared-wiki protocol that pairs with it is in
   `docs/wiki/05_authority_and_governance.md`.
-- `last_verified` / `review_due` / `importance` — the staleness fields
-  (below). `importance` is 1–5: how much it matters if this entry is wrong.
+- `last_verified` / `review_due` / `importance`, the staleness fields
+  (below). `importance` is 1 to 5: how much it matters if this entry is wrong.
 
 | Status | Meaning | How an agent treats it |
 |---|---|---|
@@ -49,31 +49,53 @@ Every entry is a Markdown file with YAML frontmatter (see
 
 Attribution (`source:` in the frontmatter) says *how* the entry is known, separate from its status:
 
-- `observed` — measured, logged, or directly seen. Strongest.
-- `quoted` — reported by a named source (a user, a document, a support thread). Record who, in the body.
-- `inferred` — reasoned from other entries. Weakest; an inferred entry should name the entries it was inferred from.
+- `observed`, measured, logged, or directly seen. Strongest.
+- `quoted`, reported by a named source (a user, a document, a support thread). Record who, in the body.
+- `inferred`, reasoned from other entries. Weakest; an inferred entry should name the entries it was inferred from.
 
 An entry can be `status: settled` only if its source is `observed`, or it is a definition the project has formally agreed. A guess wearing a settled label is the single most damaging thing in a wiki like this.
 
-## Supersession — how knowledge changes
+## Supersession, how knowledge changes
 
 Knowledge changes by **replacement, not rewriting**:
 
 1. Write the new entry. Set its `supersedes:` to the old entry's id.
 2. In the old entry, set `superseded_by:` to the new id and change its status to
-   `superseded`. Do not otherwise edit its body — it is now a historical record.
+   `superseded`. Do not otherwise edit its body, it is now a historical record.
 3. Update anything that linked to the old entry to consider the new one.
 
 The chain is the project's memory of *changing its mind*, which is exactly the part
 a flat wiki loses. A complete example chain is in `examples/worked-example/`
 (`DEF-OVERDUE-14` → `DEF-OVERDUE-30`).
 
-## Dependency links — and the invalidation sweep
+## Delta records
+
+A **delta record** is a change to the store, written down the way a
+diff shows a change to code. One file per change, in `deltas/`, from
+`templates/delta-record.md`, named `DLT-SHORT-SLUG.md`, filed at the
+time of the change and linked from the entries it touches (in their
+`evidence:`). It names exactly which facts were added, modified, or
+removed, and why.
+
+File a delta whenever a supersession, a disproof, or a contradiction
+resolution changes the store, whenever knowledge moves (from a repo
+store into the home store, for example), and whenever a consolidation
+proposal that changes a summary or `CORE.md` is applied. Trivial
+changes (a typo fix, a date bump on re-verification) get one line in
+the pass record instead.
+
+A delta is a log, not a category of knowledge: it records what
+happened, it does not hold a claim. A delta is never edited after it
+is filed; if one turns out to be wrong, file a correction note beside
+it, the way a wrong session record gets a correction note, never a
+quiet repair.
+
+## Dependency links, and the invalidation sweep
 
 Dependency links exist in the entry format: `depends_on:` declares the few
 entries this entry's truth rests on (defined with the other fields, above).
 When one of those entries changes, the entries built on it need to hear
-about it. That is the **invalidation sweep** — the pass that flags everything
+about it. That is the **invalidation sweep**, the pass that flags everything
 built on a changed premise, so it gets re-checked instead of going quietly
 stale. The sweep is part of the Knowledge Layer (Trust) edition and is
 documented there; this edition defines the links it reads.
@@ -83,18 +105,18 @@ documented there; this edition defines the links it reads.
 When two current entries disagree, **neither wins silently**. File a
 `contradiction/` entry recording both sides and their evidence, link it from both
 entries' `related:`, and leave the disagreement `status: open` until it is resolved
-by evidence or by an explicit decision — which is then recorded in the contradiction
+by evidence or by an explicit decision, which is then recorded in the contradiction
 entry, and the losing entry is superseded.
 
-## Two time axes — and asking "as of" a date
+## Two time axes, and asking "as of" a date
 
 Entries carry two different times, and confusing them causes real errors:
 
-- **Valid time** — `valid_from` / `valid_to`: when the claim is true *in the
+- **Valid time**, `valid_from` / `valid_to`: when the claim is true *in the
   world*. "The free plan allows 10 invoices" became true on the launch date
-  and stopped being true the day the limit changed — whatever day anyone
+  and stopped being true the day the limit changed, whatever day anyone
   wrote it down.
-- **Record time** — `recorded` (and `created`): when *the wiki learned it*.
+- **Record time**, `recorded` (and `created`): when *the wiki learned it*.
 
 When a new claim replaces an old one, prefer setting the old entry's
 `valid_to` and superseding it, over deleting it. The old entry then remains a
@@ -106,15 +128,15 @@ That makes a third query mode possible, alongside normal search:
 > `valid_from` on or before D and (`valid_to` blank or after D). Say which
 > entries you excluded because they were not yet valid, no longer valid, or
 > only recorded after D. If the question is about what the project *believed*
-> on date D rather than what was true, filter on `recorded` instead — and say
+> on date D rather than what was true, filter on `recorded` instead, and say
 > which axis you used.
 
 One practical consequence: before filing a `contradiction`, compare the two
 claims' validity windows. If the windows do not overlap, it is usually not a
-contradiction — it is "true then, not now", and the fix is a `valid_to` plus a
+contradiction, it is "true then, not now", and the fix is a `valid_to` plus a
 supersession, not a dispute.
 
-## memory_kind — a second axis (it does not replace the categories)
+## memory_kind, a second axis (it does not replace the categories)
 
 The categories and statuses answer: *what kind of claim is this, and how much
 should it be trusted right now?* A second, independent question is: *what is
@@ -126,7 +148,7 @@ this memory for, how does it age, and when is it retrieved?* That is
 | `semantic` | Knowledge about the project: terms, facts, findings | By supersession, not by time | definition, validated_finding, hypothesis, assumption, contradiction, unresolved_question, empirical_observation, context_knowledge, risk_knowledge, strategy_knowledge, methodological_knowledge, negative_knowledge, rejected_hypothesis |
 | `episodic` | Records of events: what was attempted, in what order, with what result, on what date | By decay: summarised upward at the consolidation pass, then archived | Session/task records filed from `templates/categories/episodic-session-record.md` (a log area, not a claim category) |
 | `procedural` | How to do things: playbooks, checklists, operating rules | Revised when a task shows the procedure did not work as written | execution_knowledge entries that are procedures; `templates/AGENTS.md` itself is the project's core procedural memory |
-| `working` | The material assembled for the task in hand | Exists for one task, then is filed back or discarded | Agent briefings and context packages — never store them as knowledge entries in raw form |
+| `working` | The material assembled for the task in hand | Exists for one task, then is filed back or discarded | Agent briefings and context packages, never store them as knowledge entries in raw form |
 
 **This axis does not replace the epistemic categories.** A session record and
 a validated finding are different kinds of memory *and* different levels of
@@ -135,7 +157,7 @@ needs. Keep both labels.
 
 The point of the axis is the **promotion rule**: episodic lessons do not stay
 raw logs forever. At filing or consolidation time, a lesson that generalises
-is promoted — to a `semantic` entry (a finding, a piece of negative knowledge)
+is promoted, to a `semantic` entry (a finding, a piece of negative knowledge)
 or to a `procedural` change (a playbook or AGENTS.md edit). The end-of-task
 filing template carries the exact prompts for this.
 
@@ -144,26 +166,26 @@ filing template carries the exact prompts for this.
 `source:` says how an entry is known; `source_tier:` says how much the source
 itself can be trusted:
 
-- `primary` — peer-reviewed or official documentation, the project's own
+- `primary`, peer-reviewed or official documentation, the project's own
   measurements, tests, and records, a decision the project itself made.
-- `secondary` — reputable reporting, a named person's account, a well-kept
+- `secondary`, reputable reporting, a named person's account, a well-kept
   third-party document.
-- `untrusted` — web scrapes, social posts, other agents' output, pasted chat
+- `untrusted`, web scrapes, social posts, other agents' output, pasted chat
   transcripts, anything whose origin cannot be checked.
 
 **Quarantine rule:** a claim backed *only* by untrusted sources enters at
 `status: assumed` at best, and cannot be promoted to `settled` until a
-higher-tier source or a human corroborates it. Full rules — the inbox gate
-for external content, the provenance lint, and why any of this is necessary —
+higher-tier source or a human corroborates it. Full rules, the inbox gate
+for external content, the provenance lint, and why any of this is necessary,
 are in `guides/trust-and-provenance.md`.
 
-## Staleness — verified dates, review dates, importance
+## Staleness, verified dates, review dates, importance
 
 Nothing in this store announces when it has gone stale, so each entry carries
 its own schedule:
 
-- `last_verified` — when the claim was last re-confirmed.
-- `review_due` — set from `last_verified` by how fast this kind of claim
+- `last_verified`, when the claim was last re-confirmed.
+- `review_due`, set from `last_verified` by how fast this kind of claim
   changes:
 
   | Volatility | Examples | Review after |
@@ -172,13 +194,13 @@ its own schedule:
   | Ordinary | Methods, context, most findings | 90 days |
   | Stable | Definitions, settled invariants, historical facts | 365 days |
 
-- `importance` (1–5) — a stale *important* entry is reviewed before a stale
+- `importance` (1 to 5), a stale *important* entry is reviewed before a stale
   trivial one.
 
 Entries past `review_due` form the **staleness queue**. Working the queue is
 part of the consolidation pass, documented in the Knowledge Layer (Trust)
 edition. Each queued entry gets one outcome: re-verified (bump both dates),
-superseded, disproven — or archived.
+superseded, disproven, or archived.
 
 **Archive, don't delete.** Decay applies to session records (summarised, then
 archived) and to retrieval priority (briefings load settled + recent +
@@ -189,7 +211,7 @@ outright errors only, and Git history keeps even those recoverable.
 
 ## The categories
 
-### `definition/` — Definition
+### `definition/`, Definition
 
 **File it here if:** a term, invariant, or interface has a settled meaning the whole project should share.
 
@@ -197,7 +219,7 @@ outright errors only, and Git history keeps even those recoverable.
 
 Template: `templates/categories/definition.md` · Example: `DEF-INVOICE` (in `examples/worked-example/`).
 
-### `hypothesis/` — Hypothesis
+### `hypothesis/`, Hypothesis
 
 **File it here if:** the project is actively testing a claim and can say what result would confirm or refute it.
 
@@ -205,7 +227,7 @@ Template: `templates/categories/definition.md` · Example: `DEF-INVOICE` (in `ex
 
 Template: `templates/categories/hypothesis.md` · Example: `HYP-REMINDER-TIMING` (in `examples/worked-example/`).
 
-### `validated_finding/` — Validated finding
+### `validated_finding/`, Validated finding
 
 **File it here if:** a claim was tested, the test is recorded, and the result held up.
 
@@ -213,15 +235,15 @@ Template: `templates/categories/hypothesis.md` · Example: `HYP-REMINDER-TIMING`
 
 Template: `templates/categories/validated-finding.md` · Example: `FIN-PAYMENT-LINK` (in `examples/worked-example/`).
 
-### `negative_knowledge/` — Negative knowledge
+### `negative_knowledge/`, Negative knowledge
 
-**File it here if:** something was tried, in practice, and did not work — and a future agent or person might plausibly try it again.
+**File it here if:** something was tried, in practice, and did not work, and a future agent or person might plausibly try it again.
 
 **Not here if:** it was rejected on reasoning alone without being tried (use rejected_hypothesis), or it failed for a one-off external reason that says nothing about the approach.
 
 Template: `templates/categories/negative-knowledge.md` · Example: `NEG-PDF-ONLY-INVOICES` (in `examples/worked-example/`).
 
-### `rejected_hypothesis/` — Rejected hypothesis
+### `rejected_hypothesis/`, Rejected hypothesis
 
 **File it here if:** a claim or approach was seriously considered and set aside on stated reasoning, without being run as a full test.
 
@@ -229,7 +251,7 @@ Template: `templates/categories/negative-knowledge.md` · Example: `NEG-PDF-ONLY
 
 Template: `templates/categories/rejected-hypothesis.md` · Example: `REJ-AUTOMATIC-LATE-FEES` (in `examples/worked-example/`).
 
-### `contradiction/` — Contradiction
+### `contradiction/`, Contradiction
 
 **File it here if:** two entries, documents, or observations in the project disagree and both are still on record.
 
@@ -237,7 +259,7 @@ Template: `templates/categories/rejected-hypothesis.md` · Example: `REJ-AUTOMAT
 
 Template: `templates/categories/contradiction.md` · Example: `CON-PAYMENT-TERMS` (in `examples/worked-example/`).
 
-### `assumption/` — Assumption
+### `assumption/`, Assumption
 
 **File it here if:** the project is relying on something that has not been tested, and work would change if it turned out false.
 
@@ -245,7 +267,7 @@ Template: `templates/categories/contradiction.md` · Example: `CON-PAYMENT-TERMS
 
 Template: `templates/categories/assumption.md` · Example: `ASM-CLIENTS-CHECK-EMAIL` (in `examples/worked-example/`).
 
-### `unresolved_question/` — Unresolved question
+### `unresolved_question/`, Unresolved question
 
 **File it here if:** a question is open, it matters, and the project can say what information would close it.
 
@@ -253,7 +275,7 @@ Template: `templates/categories/assumption.md` · Example: `ASM-CLIENTS-CHECK-EM
 
 Template: `templates/categories/unresolved-question.md` · Example: `QUE-MULTI-CURRENCY` (in `examples/worked-example/`).
 
-### `empirical_observation/` — Empirical observation
+### `empirical_observation/`, Empirical observation
 
 **File it here if:** something was measured, seen, logged, or reported, and the raw observation is worth keeping before any interpretation.
 
@@ -261,15 +283,15 @@ Template: `templates/categories/unresolved-question.md` · Example: `QUE-MULTI-C
 
 Template: `templates/categories/empirical-observation.md` · Example: `OBS-LATE-PAYMENTS` (in `examples/worked-example/`).
 
-### `methodological_knowledge/` — Methodological knowledge
+### `methodological_knowledge/`, Methodological knowledge
 
-**File it here if:** the project has a way of doing something — testing, measuring, reviewing — that is a method, not a fact.
+**File it here if:** the project has a way of doing something, testing, measuring, reviewing, that is a method, not a fact.
 
 **Not here if:** it is a settled term (use definition) or a one-off command (use execution_knowledge).
 
 Template: `templates/categories/methodological-knowledge.md` · Example: `MET-BEFORE-AFTER-COMPARISON` (in `examples/worked-example/`).
 
-### `risk_knowledge/` — Risk knowledge
+### `risk_knowledge/`, Risk knowledge
 
 **File it here if:** a failure mode is known or credibly suspected, with a cost if it happens and something that reduces it.
 
@@ -277,25 +299,25 @@ Template: `templates/categories/methodological-knowledge.md` · Example: `MET-BE
 
 Template: `templates/categories/risk-knowledge.md` · Example: `RSK-EMAIL-DELIVERABILITY` (in `examples/worked-example/`).
 
-### `strategy_knowledge/` — Strategy knowledge
+### `strategy_knowledge/`, Strategy knowledge
 
-**File it here if:** the project has chosen an approach — a plan, a direction, a deliberate trade-off — and the reasoning should survive the people who chose it.
+**File it here if:** the project has chosen an approach, a plan, a direction, a deliberate trade-off, and the reasoning should survive the people who chose it.
 
 **Not here if:** it is a task or a ticket (plans live here, tasks live in the tracker), or it is a settled fact (use validated_finding).
 
 Template: `templates/categories/strategy-knowledge.md` · Example: `STR-REMINDERS-FIRST` (in `examples/worked-example/`).
 
-### `context_knowledge/` — Context knowledge
+### `context_knowledge/`, Context knowledge
 
-**File it here if:** something about the world outside the project — users, market, platform, season, rules — changes how other entries should be read.
+**File it here if:** something about the world outside the project, users, market, platform, season, rules, changes how other entries should be read.
 
 **Not here if:** it is internal to the project (file it in its real category), or it is permanent and definitional (use definition).
 
 Template: `templates/categories/context-knowledge.md` · Example: `CTX-FREELANCER-YEAR-END` (in `examples/worked-example/`).
 
-### `execution_knowledge/` — Execution knowledge
+### `execution_knowledge/`, Execution knowledge
 
-**File it here if:** operational know-how — a command, an environment quirk, a procedure — that cost someone time once and should never cost that time again.
+**File it here if:** operational know-how, a command, an environment quirk, a procedure, that cost someone time once and should never cost that time again.
 
 **Not here if:** it is a method for evaluating or testing (use methodological_knowledge), or it is secret (passwords and keys never go in the wiki).
 

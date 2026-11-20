@@ -1,6 +1,6 @@
-# Template — Negative knowledge
+# Template, Negative knowledge
 
-**File it here if:** something was tried, in practice, and did not work — and a future agent or person might plausibly try it again.
+**File it here if:** something was tried, in practice, and did not work, and a future agent or person might plausibly try it again.
 
 **Not here if:** it was rejected on reasoning alone without being tried (use rejected_hypothesis), or it failed for a one-off external reason that says nothing about the approach.
 
@@ -33,7 +33,7 @@ review_due: YYYY-MM-DD
 importance: <1-5>
 ---
 
-# [Title — one line]
+# [Title, one line]
 
 ## Summary
 
@@ -65,12 +65,12 @@ importance: <1-5>
 
 ## Evidence
 
-[Links, paths, test names, dates — or an explicit "no evidence yet" that matches
+[Links, paths, test names, dates, or an explicit "no evidence yet" that matches
 the status you chose.]
 
 ---
 
-## Worked example (from the sample project — delete when you file a real entry)
+## Worked example (from the sample project, delete when you file a real entry)
 
 ---
 id: NEG-PDF-ONLY-INVOICES
@@ -88,7 +88,7 @@ evidence: []
 
 # Sending the invoice only as a PDF attachment loses clients
 
-For Ledgerline's first months, invoice emails contained no amounts or links in the body — everything was in the PDF attachment. Result: clients on mobile mail and behind strict spam filters missed or distrusted the mails, and late payments clustered on those invoices. Retried only if the body always carries amount, due date, and link — which is the current design, so the original approach stays retired.
+For Ledgerline's first months, invoice emails contained no amounts or links in the body, everything was in the PDF attachment. Result: clients on mobile mail and behind strict spam filters missed or distrusted the mails, and late payments clustered on those invoices. Retried only if the body always carries amount, due date, and link, which is the current design, so the original approach stays retired.
 
 The full set of worked examples, cross-linked as a real store, is in
 `examples/worked-example/`.

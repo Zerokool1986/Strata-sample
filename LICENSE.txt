@@ -1,4 +1,5 @@
-Strata Sample — The Remember Core — License (plain English)
+Strata Sample, The Remember Core, License (plain English)
+Version 1.4
 
 This license covers the free Strata sample only: the files in this package. The
 full Strata kit (the Foundation, Knowledge Layer, and Complete editions) is a
@@ -11,8 +12,8 @@ WHAT YOU MAY DO
    long as you like. There is no fee.
 2. Modify the templates, categories, and documents to fit your project. Your
    modified versions, and everything you write using them, are yours.
-3. Share and redistribute the sample, for free, in original or modified form —
-   post it, mirror it, or include it in a free collection — as long as you keep
+3. Share and redistribute the sample, for free, in original or modified form,
+   post it, mirror it, or include it in a free collection, as long as you keep
    the credits in CREDITS.md and a copy of this license with it, and make clear
    it is the free sample of Strata, not the full kit.
 4. Keep using files you created with the sample even if you stop using the

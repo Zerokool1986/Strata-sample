@@ -11,7 +11,7 @@ related: [FIN-PAYMENT-LINK, RSK-EMAIL-DELIVERABILITY]
 evidence: [support thread summary, 2026-02; OBS-LATE-PAYMENTS]
 ---
 
-# NEG-PDF-ONLY-INVOICES — Invoice only as a PDF attachment gets lost and distrusted
+# NEG-PDF-ONLY-INVOICES, Invoice only as a PDF attachment gets lost and distrusted
 
 ## What was tried
 
@@ -23,13 +23,13 @@ link in the body. Everything was inside the PDF attachment.
 Clients on mobile mail and behind strict spam filters missed or distrusted
 the messages; several freelancers reported clients claiming the invoice never
 arrived; late payments clustered on exactly those invoices. The body-less
-email also failed the moment a client forwarded it to their bookkeeper —
+email also failed the moment a client forwarded it to their bookkeeper,
 nothing in the forwarded text said what was owed.
 
 ## Why we believe it failed
 
 The attachment was doing three jobs (record, request, payment path) and doing
-the last two badly. The fix was separating the jobs — see FIN-PAYMENT-LINK.
+the last two badly. The fix was separating the jobs, see FIN-PAYMENT-LINK.
 
 ## Retry conditions
 

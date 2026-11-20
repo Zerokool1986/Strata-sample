@@ -1,13 +1,13 @@
 > **Sample note:** This sample includes the Remember core; sections describing the full store apply to the paid editions.
 
-# Quickstart — Your First Hour With Strata
+# Quickstart, Your First Hour With Strata
 
 This walkthrough takes a real (fictional) project from nothing to a working wiki in
 about an hour. The project is **Ledgerline**, a small invoicing app for freelancers.
 Every filled-in result mentioned here is in `examples/worked-example/` so you can
 compare your output against it as you go.
 
-**Already have a giant `CLAUDE.md` or `AGENTS.md`?** Do not start here —
+**Already have a giant `CLAUDE.md` or `AGENTS.md`?** Do not start here,
 start with `guides/rescue-and-migration.md`, which migrates what you have
 instead of asking you to start over. Come back to this walkthrough once the
 monolith is inventoried.
@@ -19,11 +19,11 @@ knowledge entries, and one briefing. Everything else grows from use.
 
 Copy these four folders into the root of your project repo:
 
-- `knowledge/` — your typed knowledge store (Tier 1)
-- `docs/wiki/` — your narrative project wiki
-- `templates/` — the templates you will copy from as you file entries
-- `inbox/` — the capture lane for mid-task notes you are not ready to judge yet
-- `skills/` — the compiled-procedures layer (v1.3). It starts empty and
+- `knowledge/`, your typed knowledge store (Tier 1)
+- `docs/wiki/`, your narrative project wiki
+- `templates/`, the templates you will copy from as you file entries
+- `inbox/`, the capture lane for mid-task notes you are not ready to judge yet
+- `skills/`, the compiled-procedures layer (v1.3). It starts empty and
   fills later, as procedures graduate; copy it now so the folder exists
   when the first promote-to-skill proposal is approved
 
@@ -46,12 +46,12 @@ is worse than short.
 ## 2. File your first three entries (20 minutes)
 
 Use `templates/knowledge-entry.md`, or the per-category templates in
-`templates/categories/`. For hour one, file exactly these three kinds — they are
+`templates/categories/`. For hour one, file exactly these three kinds, they are
 the ones that pay off fastest:
 
 1. **A definition** for the term your project argues about most.
    Ledgerline filed `DEF-INVOICE`: an invoice is a request for payment, not a
-   receipt — the confusion between the two had caused real bugs.
+   receipt, the confusion between the two had caused real bugs.
 2. **An assumption** your project leans on without having tested.
    Ledgerline filed `ASM-CLIENTS-CHECK-EMAIL`: the reminder design assumes clients
    read email within 2 days. Never measured. Now it is written down, flagged
@@ -62,7 +62,7 @@ the ones that pay off fastest:
 
 Notice what the frontmatter does while you file these: you must state a **status**
 and a **source** for each. If you cannot honestly say `settled`, the entry is
-`assumed` or `testing` — that honesty is the entire point.
+`assumed` or `testing`, that honesty is the entire point.
 
 ## 3. Run one briefing (15 minutes)
 
@@ -75,7 +75,7 @@ Copy `templates/agent-briefing.md` and fill it in:
 - **Relevant knowledge**: pull `OBS-LATE-PAYMENTS` (median payment at 23 days),
   `HYP-REMINDER-TIMING` (the claim being tested), `ASM-CLIENTS-CHECK-EMAIL`
   (flagged as an assumption), and `CON-PAYMENT-TERMS` (the open contradiction:
-  help text says net 14, the app enforces net 30 — relevant because reminder
+  help text says net 14, the app enforces net 30, relevant because reminder
   timing hangs off the due date).
 - **Boundaries**: do not change the due-date rule itself; that contradiction is
   not this task's to resolve.
@@ -92,7 +92,7 @@ When the task is done, run `templates/end-of-task-filing.md`:
 - What was learned? (Ledgerline: the early reminder was implemented; the comparison
   window was set per `MET-BEFORE-AFTER-COMPARISON`.)
 - What status changed? (`HYP-REMINDER-TIMING` stays `testing` until the comparison
-  window closes — finishing the code does not validate the claim.)
+  window closes, finishing the code does not validate the claim.)
 - What new questions opened? (Whether reminder wording should differ when the
   contradiction on payment terms is resolved.)
 
@@ -100,11 +100,11 @@ That filing step is the difference between a wiki and a folder of good intention
 
 ## After hour one
 
-- File entries as you learn things, in the moment, using the category templates —
+- File entries as you learn things, in the moment, using the category templates,
   or, mid-task, capture them in `inbox/` and let the consolidation pass judge
   them (`guides/deferred-adjudication-inbox.md`). Capturing is cheap on
   purpose; judging is batched on purpose.
-- Skim `guides/keeping-it-alive.md` once — it is short, and it is the anti-rot plan.
+- Skim `guides/keeping-it-alive.md` once, it is short, and it is the anti-rot plan.
 - Skim `guides/write-path-security.md` before your agent works in anyone else's
   repo, or ingests anything from messages or the web.
 - Start a Tier 2 index only when finding entries by folder and search starts to
@@ -124,9 +124,9 @@ That filing step is the difference between a wiki and a folder of good intention
    opinion wearing a uniform.
 2. Marking things `settled` because they feel true. Use `assumed`. It is not a
    demotion; it is a label that protects you.
-3. Editing an old entry when knowledge changes. Supersede it instead — the chain
+3. Editing an old entry when knowledge changes. Supersede it instead, the chain
    is the audit trail.
 4. Deleting the losing side of a contradiction. Keep both sides in a contradiction
    entry until the disagreement is genuinely resolved.
 5. Reading the whole wiki into every task. Briefings and context packages exist
-   precisely so nobody — human or agent — has to.
+   precisely so nobody, human or agent, has to.

@@ -20,7 +20,7 @@ depends_on: []
 evidence: []
 ---
 
-# DEF-INVOICE-RECORD — (SUPERSEDED) The invoice of record is the PDF generated at send time
+# DEF-INVOICE-RECORD, (SUPERSEDED) The invoice of record is the PDF generated at send time
 
 > This entry is **superseded** by DEF-INVOICE-RECORD-V2. It is kept,
 > unedited, as the historical record of the earlier definition. Do not use
@@ -28,8 +28,8 @@ evidence: []
 
 ## The definition (as originally written)
 
-The invoice of record — the version that governs disputes, payment matching,
-and what the client owes — is the PDF generated when the invoice is sent.
+The invoice of record, the version that governs disputes, payment matching,
+and what the client owes, is the PDF generated when the invoice is sent.
 The portal page and the email are renderings of that PDF.
 
 ## Why it was replaced

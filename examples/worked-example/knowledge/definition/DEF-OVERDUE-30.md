@@ -11,7 +11,7 @@ related: [OBS-LATE-PAYMENTS, CON-PAYMENT-TERMS]
 evidence: [OBS-LATE-PAYMENTS]
 ---
 
-# DEF-OVERDUE-30 — An invoice is overdue 30 days after sending
+# DEF-OVERDUE-30, An invoice is overdue 30 days after sending
 
 ## Summary
 
@@ -32,7 +32,7 @@ replaces DEF-OVERDUE-14.
 OBS-LATE-PAYMENTS (median payment at 23 days) showed the old 14-day line sat
 below normal behaviour. 30 days was chosen to sit just above the observed
 median, so "overdue" means genuinely late for this user base. If the median
-moves materially, revisit this number — it is an evidence-based setting, not
+moves materially, revisit this number, it is an evidence-based setting, not
 a law of nature.
 
 ## Known inconsistency

@@ -20,12 +20,12 @@ depends_on: [OBS-PORTAL-EDITS]
 evidence: [OBS-PORTAL-EDITS]
 ---
 
-# DEF-INVOICE-RECORD-V2 — The invoice of record is the portal's current version; the sent PDF is a snapshot
+# DEF-INVOICE-RECORD-V2, The invoice of record is the portal's current version; the sent PDF is a snapshot
 
 ## Summary
 
 The invoice of record is the version in the client portal as it currently
-stands. The PDF generated at send time is a snapshot — evidence of what was
+stands. The PDF generated at send time is a snapshot, evidence of what was
 sent, not the governing amount. This definition replaces DEF-INVOICE-RECORD.
 
 ## The definition
@@ -44,5 +44,5 @@ from the sent PDF, and in every sampled case the client paid the portal
 amount. The old definition (DEF-INVOICE-RECORD) named the PDF as
 governing; practice had already moved. This definition records where the
 truth actually lives, and payment-matching work now reads the portal
-amount — see ASM-PORTAL-AMOUNT-GOVERNS for the assumption that replaced
+amount, see ASM-PORTAL-AMOUNT-GOVERNS for the assumption that replaced
 the one this change invalidated.
