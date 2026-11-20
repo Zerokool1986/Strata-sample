@@ -1,12 +1,12 @@
 # Strata
 
-> Strata is a knowledge system for AI coding agents: 130 plain-Markdown files in git that give your coding agent a memory with status, provenance, and two dates on every entry. When a premise changes, everything built on it gets flagged. One-time $19.99, with a free 31-file sample.
+> Strata is a knowledge system for AI coding agents: 131 files built around plain Markdown in git that give your coding agent a memory with status, provenance, and two dates on every entry. When a premise changes, everything built on it gets flagged. One-time $19.99, with a free 31-file sample.
 
 ## Links
 
 - [Strata landing page](https://zerokool1986.github.io/Strata-sample/): what Strata is, how it works, the comparison, the proof, FAQ
 - [Free sample: the Remember core, 31 files](https://mullinscape57.gumroad.com/l/qfopa)
-- [Full bundle: 130 files, $19.99 one-time](https://mullinscape57.gumroad.com/l/ectts)
+- [Full bundle: 131 files, $19.99 one-time](https://mullinscape57.gumroad.com/l/ectts)
 - [Strata on Product Hunt](https://www.producthunt.com/products/strata-10?launch=strata-10): launching Tuesday, November 24, 2026
 
 ## What it is
@@ -34,7 +34,7 @@ Coding agents that read and write files in a repo: Claude Code, Codex, Cursor, a
 
 ## What you get
 
-130 files in one bundle for $19.99, one-time, no subscription: Remember (the working knowledge system, 14 typed categories), Trust (the governance layer), Act (the skills layer, six Agent Skills (three working, three example) with one-tap setup and home-install mode). 14-day, one-email, full refund. The free sample is the complete Remember core, 31 files, with a five-question mini self-test.
+131 files in one bundle for $19.99, one-time, no subscription: Remember (the working knowledge system, 14 typed categories), Trust (the governance layer), Act (the skills layer, six Agent Skills (three working, three example) with one-tap setup and home-install mode). 14-day, one-email, full refund. The free sample is the complete Remember core, 31 files, with a five-question mini self-test.
 
 ## Full text
 

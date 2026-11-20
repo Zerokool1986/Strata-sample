@@ -1,10 +1,10 @@
 # Strata: Remember. Trust. Act.
 
-Strata is a knowledge system for AI coding agents: 130 plain-Markdown files in git that give your coding agent a memory with status, provenance, and two dates on every entry. When a premise changes, everything built on it gets flagged. One-time $19.99, with a free 31-file sample.
+Strata is a knowledge system for AI coding agents: 131 files built around plain Markdown in git that give your coding agent a memory with status, provenance, and two dates on every entry. When a premise changes, everything built on it gets flagged. One-time $19.99, with a free 31-file sample.
 
 - Landing page: https://zerokool1986.github.io/Strata-sample/
 - Free sample (Remember core, 31 files): https://mullinscape57.gumroad.com/l/qfopa
-- Full bundle (130 files, $19.99 one-time): https://mullinscape57.gumroad.com/l/ectts
+- Full bundle (131 files, $19.99 one-time): https://mullinscape57.gumroad.com/l/ectts
 - Product Hunt: https://www.producthunt.com/products/strata-10?launch=strata-10 (launching Tuesday, November 24, 2026)
 
 ## The failure mode
@@ -78,7 +78,7 @@ Strata is sold the way it was built, in stages, each one standing on the last, a
 - Trust, the governance layer: dependency links with an invalidation sweep, consolidation diff discipline, the deferred-adjudication inbox, the write-path security pack, and the rescue and migration kit.
 - Act, the skills layer: proven procedures compiled into Agent Skills (SKILL.md), a promote-to-skill step in consolidation, three finished example skills with their failure lessons, one-tap setup, and the multi-agent write protocol.
 
-130 files in all, with six Agent Skills (three working, three example) and one-tap setup. One price, $19.99, everything included, one-time purchase, no subscription. 14-day, one-email, full refund if it is not useful to you. If an update to the bundle is published, email with your purchase and you will be sent the current files.
+131 files in all, with six Agent Skills (three working, three example) and one-tap setup. One price, $19.99, everything included, one-time purchase, no subscription. 14-day, one-email, full refund if it is not useful to you. If an update to the bundle is published, email with your purchase and you will be sent the current files.
 
 New in v1.4: install once at home and point at every repo, with six Agent Skills (three working, three example) and one-tap setup, so the home repo is built for you.
 
@@ -94,7 +94,7 @@ Any agent that can read and write files in a repo: Claude Code, Codex, Cursor, a
 
 ### Isn't the base pattern free? Why pay?
 
-Yes. The base pattern is Andrej Karpathy's LLM Wiki idea, published free and credited everywhere in the kit; you can absolutely implement it yourself. What you pay for is the finished system the pattern does not ship: the category set, the status lifecycle, supersession and invalidation machinery, the trust gate, the consolidation discipline, two self-tests, and the worked examples: 130 files of design you do not have to invent. DIY costs design time; Strata costs $19.99, once.
+Yes. The base pattern is Andrej Karpathy's LLM Wiki idea, published free and credited everywhere in the kit; you can absolutely implement it yourself. What you pay for is the finished system the pattern does not ship: the category set, the status lifecycle, supersession and invalidation machinery, the trust gate, the consolidation discipline, two self-tests, and the worked examples: 131 files of design you do not have to invent. DIY costs design time; Strata costs $19.99, once.
 
 ### Can I use it in commercial projects?
 
