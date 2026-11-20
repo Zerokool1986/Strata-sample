@@ -64,7 +64,7 @@ The concession, because a comparison that never concedes is an ad: if you need a
 
 ## The proof: tested end-to-end before it was sold
 
-Strata was pulled from its repo, installed into a fresh project by its own quickstart, exercised (entries filed, an assumption superseded, the invalidation sweep run: the one dependent entry was flagged, exactly as designed), and then a fresh agent session was given the system's own eight-question self-test against the worked example: recall, update, temporal reasoning, multi-hop, contradiction, provenance, plus two traps (a question with no answer in the store, where the correct move is to abstain, and a question built on a false premise, where the correct move is to correct the premise first).
+Strata was pulled from its repo, installed into a fresh project by its own quickstart, exercised (entries filed, an assumption superseded, the invalidation sweep run: the one dependent entry was flagged, exactly as designed), and then a fresh agent session was given an eight-question run against the worked example: recall, update, temporal reasoning, multi-hop, contradiction, provenance, plus two traps (a question with no answer in the store, where the correct move is to abstain, and a question built on a false premise, where the correct move is to correct the premise first).
 
 Result: 8 out of 8. All eight questions answered correctly, both traps handled.
 
@@ -78,9 +78,9 @@ Strata is sold the way it was built, in stages, each one standing on the last, a
 - Trust, the governance layer: dependency links with an invalidation sweep, consolidation diff discipline, the deferred-adjudication inbox, the write-path security pack, and the rescue and migration kit.
 - Act, the skills layer: proven procedures compiled into Agent Skills (SKILL.md), a promote-to-skill step in consolidation, three finished example skills with their failure lessons, one-tap setup, and the multi-agent write protocol.
 
-130 files in all, with six Agent Skills and one-tap setup. One price, $19.99, everything included, one-time purchase, no subscription. 14-day, one-email, full refund if it is not useful to you. If an update to the bundle is published, email with your purchase and you will be sent the current files.
+130 files in all, with six Agent Skills (three working, three example) and one-tap setup. One price, $19.99, everything included, one-time purchase, no subscription. 14-day, one-email, full refund if it is not useful to you. If an update to the bundle is published, email with your purchase and you will be sent the current files.
 
-New in v1.4: install once at home and point at every repo, with six Agent Skills and one-tap setup, so the home repo is built for you.
+New in v1.4: install once at home and point at every repo, with six Agent Skills (three working, three example) and one-tap setup, so the home repo is built for you.
 
 ## FAQ
 
